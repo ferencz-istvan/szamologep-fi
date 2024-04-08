@@ -8,6 +8,7 @@ function clearCalc () {
     operatorCalc="";
     document.getElementById("newNum").value="";
     underCalc = false;
+    document.getElementById("newNum").focus();
 };
 function doCalc(theElem){
     switch(operatorCalc) {
@@ -45,6 +46,7 @@ function inputNewNum(){
     document.getElementById("newNum").value="";
     operatorCalc="";
     underCalc = false;
+    document.getElementById("newNum").focus();
 };
 
 function newOpPlus () {
@@ -59,6 +61,7 @@ function newOpPlus () {
     document.getElementById("result").innerHTML = "= " + resultCalc + " + ";
     operatorCalc = "+";
     underCalc = true;
+    document.getElementById("newNum").focus();
 }
 function newOpMinus () {
     if (document.getElementById("newNum").value != "" && underCalc === true) {
@@ -71,6 +74,7 @@ function newOpMinus () {
     document.getElementById("result").innerHTML = "= " + resultCalc + " - ";
     operatorCalc = "-";
     underCalc = true;
+    document.getElementById("newNum").focus();
 }
 function newOpMultip () {
     if (document.getElementById("newNum").value != "" && underCalc === true) {
@@ -83,6 +87,7 @@ function newOpMultip () {
     document.getElementById("result").innerHTML = "= " + resultCalc + " * ";
     operatorCalc = "*";
     underCalc = true;
+    document.getElementById("newNum").focus();
 }
 function newOpDivi () {
     if (document.getElementById("newNum").value != "" && underCalc === true) {
@@ -95,4 +100,5 @@ function newOpDivi () {
     document.getElementById("result").innerHTML = "= " + resultCalc + " / ";
     operatorCalc = "/";
     underCalc = true;
+    document.getElementById("newNum").focus();
 }
