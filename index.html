@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <script src="calc.js"></script>
+</head>
+<body>
+    <h1>Számológép</h1>
+    <div class="container">
+        <div id= "inp"><input type="number" id="newNum" placeholder="elem hozzáadása"></div>
+        <div class="button" id="buttonClear" role="button" onclick="clearCalc()">Clear</div>
+        <div class="button" id="buttonPlus" role="button" onclick="newOpPlus()">+</div>
+        <div class="button" id="buttonMinus" role="button" onclick="newOpMinus()">-</div>
+        <div class="button" id="buttonMultip" role="button" onclick="newOpMultip()">*</div>
+        <div class="button" id="buttonDivi" role="button" onclick="newOpDivi()">/</div>
+        <div class="button" id="buttonEqual" role="button" onclick="inputNewNum()">=</div>
+        <div id="result"></div>
+    </div>
+    <script>
+        let input = document.getElementById("newNum");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("buttonEqual").click();
+      }
+    });
+    </script>
+</body>
+</html>
